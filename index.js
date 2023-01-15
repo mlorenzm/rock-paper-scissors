@@ -9,7 +9,8 @@
         // those two variables are compared
         // a winner is decided 
         // winner's score is incremented by 1
-    //
+// at the end of 5 gameRounds
+// a winner is decided based on who has the greater score
 
 
 function game(){ 
@@ -63,7 +64,7 @@ function game(){
     }
     }
     // outside for loop, we now have our updated scores for best of 5 gameRounds
-    
+
     if (userScore > computerScore){
         console.log('You win!');
     } else{
