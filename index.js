@@ -10,10 +10,13 @@ function getComputerChoice(){
     return computer.toString() // Converted to string to avoid logic problems
 }
 function getPlayerChoice(){
-    user = prompt('Select:');
+    user = prompt('Select between "rock", "paper" or "scissors":');
     return user.toLowerCase();
 }
 
 let computerSelection = getComputerChoice();
 let playerSelection = getPlayerChoice();
 
+function gameRound(computerSelection, playerSelection){
+    if (computerSelection == '0' && playerSelection == 'rock') 
+}
