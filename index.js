@@ -18,5 +18,25 @@ let computerSelection = getComputerChoice();
 let playerSelection = getPlayerChoice();
 
 function gameRound(computerSelection, playerSelection){
-    if (computerSelection == '0' && playerSelection == 'rock') 
+    let result
+    if (computerSelection == '0' && playerSelection == 'rock'){
+        result = 'tie';
+    } else if (computerSelection == '0' && playerSelection == 'paper'){
+        result = 'win';
+    } else if (computerSelection == '0' && playerSelection == 'scissors'){
+        result = 'lose';
+    } else if (computerSelection == '1' && playerSelection == 'rock'){
+        result = 'lose';
+    } else if (computerSelection == '1' && playerSelection == 'paper'){
+        result = 'tie';
+    } else if (computerSelection == '1' && playerSelection == 'scissors'){
+        result = 'win';
+    } else if (computerSelection == '2' && playerSelection == 'rock'){
+        result = 'win';
+    } else if (computerSelection == '2' && playerSelection == 'paper'){
+        result = 'lose';
+    } else if (computerSelection == '2' && playerSelection == 'scissors'){
+        result = 'tie';
+    }
+    return result;
 }
