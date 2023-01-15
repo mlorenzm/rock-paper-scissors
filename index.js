@@ -5,6 +5,11 @@
 
 
 
+function game(){ 
+    
+let userScore = 0;
+let computerScore = 0;
+for (let i = 0; i < 5; i++){
 function getComputerChoice(){
     computer = Math.floor(Math.random()*3); // Returns a random number between 0-3
     return computer.toString() // Converted to string to avoid logic problems
@@ -18,7 +23,7 @@ let computerSelection = getComputerChoice();
 let playerSelection = getPlayerChoice();
 
 function gameRound(computerSelection, playerSelection){
-    let result
+    let result;
     if (computerSelection == '0' && playerSelection == 'rock'){
         result = 'tie';
     } else if (computerSelection == '0' && playerSelection == 'paper'){
@@ -39,4 +44,19 @@ function gameRound(computerSelection, playerSelection){
         result = 'tie';
     }
     return result;
+}
+
+    gameResult = gameRound(computerSelection, playerSelection);
+    console.log(`Result of game ${i} is ${gameResult}`);
+    if (gameResult == 'win'){
+    userScore++;
+    } else if (gameResult == 'lose'){
+    computerScore++;
+    }
+    }
+    if (userScore > computerScore){
+        console.log('You win!');
+    } else{
+        console.log('You lose!')
+    }
 }
