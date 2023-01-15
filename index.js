@@ -55,7 +55,7 @@ function game(){
     }
 
     gameResult = gameRound(computerSelection, playerSelection);
-    console.log(`Result of game ${i} is ${gameResult}`);
+    console.log(`Result of game ${i + 1} is a ${gameResult}`);
     
     if (gameResult == 'win'){
         userScore++;
@@ -67,7 +67,9 @@ function game(){
 
     if (userScore > computerScore){
         console.log('You win!');
-    } else{
+    } else if (userScore < computerScore){
         console.log('You lose!')
+    } else{
+        console.log('It\'s a tie!')
     }
 }
