@@ -7,13 +7,31 @@
     <title>Rock 📄 Paper ✂️ Scissors</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪨</text></svg>">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="mobile.css">
 </head>
 <body>
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
 <div class="main">
+    <div id="restart-container">
+        <p id="result"></p>
+        <button id="restart-button">Play Again!</button>
+    </div>
     <div class="main-container">
         <h1 id="main-title">Rock, paper, scissors</h1>
-
+        <div id="scoreboard">
+            <div id="player-ico" class="player">
+                👨🏻
+            </div>
+            <div id="player" class="score"></div>
+            <div id="computer" class="score"></div>
+            <div id="computer-ico" class="player">
+                💻
+            </div>
+        </div>
+        <div id="current-box">
+            <div id="current-user"></div>
+            <div id="current-computer"></div>
+        </div>
         <div id="box-title">Choose one:</div>
         <div id="button-box">
             <button id="rock" class="btn">🪨</button>

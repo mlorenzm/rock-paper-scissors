@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500&display=swap');
+body{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
 .main{
     background-color: #f5f5f5;
 
@@ -10,20 +16,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0px;
     min-height: 100vh;
     margin: 0;
 }
 .main-container{
+    
     background-color: #f5f5f5;
     background-image: linear-gradient(#fafafa 0%, #F5F5F5 75%, rgba(131, 131, 131, 0.05));
     display:flex;
     flex-direction: column;
     justify-content: center;
-    height: 43em;
-    width: 40em;
+    align-items: center;
+    height: 800px;
+    width: 43em;
     box-shadow: 9px 9px 20px -3px rgba(0,0,0,0.1);
     border-radius: 3em;
-    padding: 0px 30px 60px 30px;
+    gap: 40px;
+    padding: 0px 30px 30px 30px;
+    flex: 0 0 auto;
+    position:absolute;
 }
 
 h1{
@@ -31,21 +43,60 @@ h1{
     font-size: 64px;
     margin-bottom: auto;
 }
+#scoreboard{
+    font-family: Oxanium;
+    display: flex;
+    justify-content: space-between;
+    width: 30em;
+    align-items:center;
+    -webkit-transition: -webkit-flex 3s linear;
+    flex: 1 0 auto;
+}
+.player{
+    font-size: 72px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+.score{
+    font-size: 120px;
+    font-weight: bold;
+    animation: fadeIn 3s;
+    background: linear-gradient(to bottom, #ed213a, #93291e);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 #results-box{
     display: flex;
+    align-items: center;
+    gap: 20px;
     justify-content:left;
-    margin: 60px 0px 60px 30px;
+    margin: 15px 0px 50px 30px;
     font-size: 32px;
+    align-self: flex-start;
+}
+#results{
+    font-size: 42px;
 }
 #box-title{
     text-align: center;
     font-size: 32px;
+    margin-bottom: -20px;
+}
+#current-box{
+    display: flex;
+    gap: 300px;
+    font-size: 64px;
+    margin: -10px;
 }
 #button-box{
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 0px;
     flex-wrap: wrap;
 }
 .btn{
@@ -75,4 +126,47 @@ h1{
     background-image: radial-gradient(circle, rgba(230,230,230,0.2) 0%, rgba(109, 50, 50, 0.5) 75%, rgba(111, 111, 238, 0.1) 100%);
     border: solid 8px rgba(109, 50, 50, 0.5);
     scale: 1.1;
+}
+
+#restart-container{
+    animation: fadeIn 2s;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 400px;
+    margin-right: 60px;
+    margin-top: -20px;
+    box-shadow: 9px 9px 20px -3px rgba(0,0,0,0.1);
+    border-radius: 2em;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(#fafafa 0%, #F5F5F5 75%, rgba(131, 131, 131, 0.05));
+    z-index: 1000;
+}
+#result{
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+#restart-button{
+    font: Roboto;
+    font-size: 32px;
+    width: 250px;
+    height: 75px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    background-color: #3B82F6; 
+    color: #ffffff; 
+    font-weight: 700; 
+    border-radius: 10px; 
+    border-bottom-width: 4px; 
+
+ 
+}
+
+#restart-button:hover{
+    background-color: #5b98f9;
+    border-color: #1D4ED8;
 }
